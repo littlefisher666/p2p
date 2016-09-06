@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "http://struts.apache.org/dtds/struts-2.1.7.dtd" >
+<struts>
+	<package name="ajax" namespace="/ajax" extends="json-default">
+		<action name="selectProductByPage" class="action.AjaxAction" method="selectProductByPage">
+			<result type="json">
+				<param name="root">data</param>
+			</result>
+		</action>
+		<action name="selectProductByType" class="action.AjaxAction" method="selectProductByType">
+			<result type="json">
+				<param name="root">data</param>
+			</result>
+		</action>
+		<action name="selectNewsByPage" class="action.AjaxAction" method="selectNewsByPage">
+			<result type="json">
+				<param name="root">data</param>
+			</result>
+		</action>
+	</package>
+</struts>

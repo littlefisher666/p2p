@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "http://struts.apache.org/dtds/struts-2.1.7.dtd" >
+<struts>
+	<package name="lendingPeriod" namespace="/lendingPeriod" extends="base-package">
+		<action name="loanTimeManage" class="action.LendingPeriodAction" method="loanTimeManage">
+			<result>/forwardBD_loanTimeManage</result>
+		</action>
+		<action name="modLendingPeriodPeriod" class="action.LendingPeriodAction" method="modLendingPeriodPeriod">
+			<result>../lendingPeriod/loanTimeManage.action</result>
+		</action>
+		<action name="addLendingPeriod" class="action.LendingPeriodAction" method="addLendingPeriod">
+			<result>../lendingPeriod/loanTimeManage.action</result>
+		</action>
+		<action name="modLendingPeriodStatus" class="action.LendingPeriodAction" method="modLendingPeriodStatus">
+			<result>../lendingPeriod/loanTimeManage.action</result>
+		</action>
+	</package>
+</struts>

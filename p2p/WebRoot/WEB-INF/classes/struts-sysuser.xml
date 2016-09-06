@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "http://struts.apache.org/dtds/struts-2.1.7.dtd" >
+<struts>
+	<package name="sysuser" namespace="/sysuser" extends="base-package">
+		<action name="login" class="action.SysuserAction" method="login">
+			<result>/forwardBD_main</result>
+			<result name="fail">/forwardBD_login</result>
+		</action>
+		<action name="delProductByProductId" class="action.SysuserAction" method="delProductByProductId">
+			<result>../product/productManager.action</result>
+		</action>
+		<action name="updateProductTypeStatus" class="action.SysuserAction" method="updateProductTypeStatus">
+			<result>../productType/productTypeManage.action</result>
+		</action>
+		<action name="delCompanyByCompanyId" class="action.SysuserAction" method="delCompanyByCompanyId">
+			<result>../company/companyManage.action</result>
+		</action>
+		<action name="delNewsByNewsId" class="action.SysuserAction" method="delNewsByNewsId">
+			<result>../news/newsManage.action</result>
+		</action>
+		<action name="logout" class="action.SysuserAction" method="logout">
+			<result>/forwardBD_login</result>
+		</action>
+		<action name="modSysuserPassword" class="action.SysuserAction" method="modSysuserPassword">
+			<result>/forwardBD_login</result>
+		</action>
+	</package>
+</struts>

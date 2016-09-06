@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+						http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+						http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+						
+	<bean id="ajaxAction" class="action.AjaxAction" scope="prototype">
+		<property name="productService" ref="productService"></property>
+		<property name="newsService" ref="newsService"></property>
+	</bean>
+	
+	<bean id="applyAction" class="action.ApplyAction" scope="prototype">
+		<property name="applyService" ref="applyService"></property>
+	</bean>
+	
+	<bean id="companyAction" class="action.CompanyAction" scope="prototype">
+		<property name="companyService" ref="companyService"></property>
+	</bean>
+	
+	<bean id="lendingPeriodAction" class="action.LendingPeriodAction" scope="prototype">
+		<property name="lendingPeriodService" ref="lendingPeriodService"></property>
+	</bean>
+	
+	<bean id="newsAction" class="action.NewsAction" scope="prototype">
+		<property name="newsService" ref="newsService"></property>
+	</bean>
+	
+	<bean id="productAction" class="action.ProductAction" scope="prototype">
+		<property name="productService" ref="productService"></property>
+		<property name="sysuserService" ref="sysuserService"></property>
+		<property name="productTypeService" ref="productTypeService"></property>
+		<property name="lendingPeriodService" ref="lendingPeriodService"></property>
+	</bean>
+
+	<bean id="productTypeDao" class="action.ProductTypeDao" scope="prototype">
+		<property name="productTypeService" ref="productTypeService"></property>
+	</bean>
+
+	<bean id="sysuserDao" class="action.SysuserAction" scope="prototype">
+		<property name="sysuserService" ref="sysuserService"></property>
+	</bean>
+
+</beans>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "http://struts.apache.org/dtds/struts-2.1.7.dtd" >
+<struts>
+	<package name="product" namespace="/product" extends="struts-default">
+		<action name="index" class="action.ProductAction" method="index">
+			<result name="success">/forward_index</result>
+		</action>
+		<action name="productIndex" class="action.ProductAction" method="productIndex">
+			<result>/forward_productIndex</result>
+		</action>
+		<action name="productManager" class="action.ProductAction" method="productManager">
+			<result>/forwardBD_productManage</result>
+		</action>
+		<action name="productAdd" class="action.ProductAction" method="productAdd">
+			<result>/forwardBD_productAdd</result>
+		</action>
+		<action name="addProduct" class="action.ProductAction" method="addProduct">
+			<result>../product/productManager.action</result>
+		</action>
+		<action name="productDetail" class="action.ProductAction" method="productDetail">
+			<result>/forwardBD_productDetail</result>
+		</action>
+		<action name="toProductModify" class="action.ProductAction" method="toProductModify">
+			<result>/forwardBD_productModify</result>
+		</action>
+		<action name="productModify" class="action.ProductAction" method="productModify">
+			<result>../product/productManager.action</result>
+		</action>
+		<action name="onlineApply" class="action.ProductAction" method="onlineApply">
+			<result>/forwardBD_onlineApply</result>
+		</action>
+	</package>
+</struts>

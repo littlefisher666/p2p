@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "http://struts.apache.org/dtds/struts-2.1.7.dtd" >
+<struts>
+	<package name="news" namespace="/news" extends="base-package">
+		<action name="newsIndex" class="action.NewsAction" method="newsIndex">
+			<result>/forward_newsIndex</result>
+		</action>
+		<action name="newsManage" class="action.NewsAction" method="newsManage">
+			<result>/forwardBD_newsManage</result>
+		</action>
+		<action name="newsDetail" class="action.NewsAction" method="newsDetail">
+			<result>/forwardBD_newsDetail</result>
+		</action>
+		<action name="toNewsModify" class="action.NewsAction" method="toNewsModify">
+			<result>/forwardBD_newsModify</result>
+		</action>
+		<action name="newsAdd" class="action.NewsAction" method="newsAdd">
+			<result>../news/newsManage.action</result>
+		</action>
+		<action name="newsModify" class="action.NewsAction" method="newsModify">
+			<result>../news/newsManage.action</result>
+		</action>
+		<action name="selectNewsByPage" class="action.NewsAction" method="selectNewsByPage">
+			<result>/forward_newsIndex</result>
+		</action>
+	</package>
+</struts>

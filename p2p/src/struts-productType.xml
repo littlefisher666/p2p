@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "http://struts.apache.org/dtds/struts-2.1.7.dtd" >
+<struts>
+	<package name="productType" namespace="/productType" extends="base-package">
+		<action name="productTypeManage" class="action.ProductTypeAction" method="productTypeManage">
+			<result>/forwardBD_productTypeManage</result>
+		</action>
+		<action name="addProductType" class="action.ProductTypeAction" method="addProductType">
+			<result>../productType/productTypeManage.action</result>
+		</action>
+		<action name="productTypeModify" class="action.ProductTypeAction" method="productTypeModify">
+			<result>../productType/productTypeManage.action</result>
+		</action>
+	</package>
+</struts>

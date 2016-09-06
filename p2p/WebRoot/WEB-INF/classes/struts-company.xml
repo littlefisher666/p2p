@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "http://struts.apache.org/dtds/struts-2.1.7.dtd" >
+<struts>
+	<package name="company" namespace="/company" extends="base-package">
+		<action name="companyManage" class="action.CompanyAction" method="companyManage">
+			<result>/forwardBD_companyManage</result>
+		</action>
+		<action name="companyDetail" class="action.CompanyAction" method="companyDetail">
+			<result>/forwardBD_companyDetail</result>
+		</action>
+		<action name="ToCompanyModify" class="action.CompanyAction" method="ToCompanyModify">
+			<result>/forwardBD_companyModify</result>
+		</action>
+		<action name="companyModify" class="action.CompanyAction" method="companyModify">
+			<result>../company/companyManage.action</result>
+		</action>
+		<action name="companyAdd" class="action.CompanyAction" method="companyAdd">
+			<result>../company/companyManage.action</result>
+		</action>
+		<action name="companyReport" class="action.CompanyAction" method="companyReport">
+			<result>/forwardBD_companyReport</result>
+		</action>
+		<action name="qryCompanyReportByYear" class="action.CompanyAction" method="qryCompanyReportByYear">
+			<result>/forwardBD_companyReport</result>
+		</action>
+		<action name="qryCompanyReportDetailByCompanyId" class="action.CompanyAction" method="qryCompanyReportDetailByCompanyId">
+			<result>/forwardBD_companyReportDetail</result>
+		</action>
+	</package>
+</struts>
